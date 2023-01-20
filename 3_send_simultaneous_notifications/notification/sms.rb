@@ -1,7 +1,7 @@
 require_relative "../application_service.rb"
 require_relative "../notification.rb"
 
-class Notification::Email < ApplicationService
+class Notification::Sms < ApplicationService
   attr_reader :message
 
   def initialize(message)
