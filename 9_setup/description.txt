@@ -1,0 +1,6 @@
+Sempre que há um novo integrante no time, existe a necessidade, muitas vezes custosa, da configuração do ambiente local.
+
+Existem algumas ferramentas que facilitam imensamente o processo. Um bom exemplo é o docker.
+
+Sendo assim, eu trabalharia no processo de conteinerização do ambiente, disponibilizando o
+arquivo de setup 'docker-compose.yml' para todos os membros do time.
