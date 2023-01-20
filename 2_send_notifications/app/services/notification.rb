@@ -5,15 +5,15 @@ require_relative "./notification/email.rb"
 module Notification
   PROVIDERS = {
     'Whatsapp' => Notification::Whatsapp,
-    'Sms' => 'Notification::Sms',
-    'Email' => 'Notification::Email'
+    'Sms' => Notification::Sms,
+    'Email' => Notification::Email
   }.freeze
 
-  def self.for(message)
-    PROVIDERS.each_key do |provider|
-      provider.new
-    end
+  def self.for(provider, message)
+    PROVIDERS[provider].new(message)
   end
 end
 
-Notification.for("lorem ipsum dolor sit amet").call
+Notification.for('Whatsapp', 'lorem ipsum dolor sit amet').call
+Notification.for('Sms', 'lorem ipsum dolor sit amet').call
+Notification.for('Email', 'lorem ipsum dolor sit amet').call
