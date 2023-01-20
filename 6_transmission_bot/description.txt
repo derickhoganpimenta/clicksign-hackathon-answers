@@ -1,0 +1,14 @@
+1 - Um mecanismo de busca no banco de dados deve ser implementado, trazendo uma lista dos
+jogos acontecendo no momento da busca;
+2 - Caso haja jogos disponíveis, uma lista dos mesmos será exibida;
+3 - Ao selecionar um dos jogos, uma arquitetura baseada em ActionCable deve ser iniciada
+4 - Sempre que ocorrer uma alteração no placar, uma mensagem será enviada a um Worker com
+alta prioridade de execução, e o mesmo deve alimentar o 'Channel' aberto entre o
+browser do cliente e o se`rvidor, promovendo assim a disponibilização da informação do placar
+ao usuário
+
+OBS.: Se o objetivo for a disponibilização das informações de placar em tempo real, o descrito
+acima deve ser o suficiente. Se o obetivo for o de receber as informações a cada x minutos,
+uma rotina deve ser implementada, por exemplo, utilizando o recurso 'cron' do Sidekiq, onde
+a cada período de x minutos, as informações dos placares podem ser lidas do banco de dados e
+enviadas ao 'Channel'
