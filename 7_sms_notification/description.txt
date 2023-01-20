@@ -1,0 +1,9 @@
+1 - Criar um worker responsável por processar o upload do XLSX;
+2 - Criar um serviço responsável por processar o arquivo enviado;
+3 - Este serviço terá a responsabilidade de processar as linhas do XLSX;
+4 - Outro serviço responsável por enviar cada informação lida no arquivo para o worker;
+5 - O worker, por sua vez, deverá fazer a chamada ao serviço responsável por validar se o
+usuário referente ao ID informado na planilha
+é pertencente a um usuário cujo serviço de notificações via SMS está ativo;
+6 - Em caso afirmativo, outro serviço responsável pelo envio das informações via
+SMS deverá ser chamado, concluindo o processo de envio da notificação
