@@ -1,3 +1,6 @@
+require_relative "../application_service.rb"
+require_relative '../action.rb'
+
 class Action::Tipo2 < ApplicationService
   attr_reader :type
 

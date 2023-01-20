@@ -1,3 +1,4 @@
+require_relative "../application_service.rb"
 require_relative '../action.rb'
 
 class Action::Tipo1 < ApplicationService
